@@ -5,16 +5,16 @@ using UnityEngine.UI;
 
 public class ResetHelper : MonoBehaviour {
 
-    public Text yourScore;
-    public Text highScore;
+    public GameObject yourScore;
+    public GameObject highScore;
 
     void Start () {
         if(PlayerPrefs.GetInt("HS") < Player.GetInstance().GetSegments())
         {
             PlayerPrefs.SetInt("HS", Player.GetInstance().GetSegments());
         }
-        yourScore.text = "Your Score: " + Player.GetInstance().GetSegments();
-        highScore.text = "High Score: " + PlayerPrefs.GetInt("HS");
+        yourScore.GetComponent<TMPro.TextMeshProUGUI>().text = "Your Score: " + Player.GetInstance().GetSegments();
+        highScore.GetComponent<TMPro.TextMeshProUGUI>().text = "High Score: " + PlayerPrefs.GetInt("HS");
         Player.GetInstance().Reset();
     }
 	

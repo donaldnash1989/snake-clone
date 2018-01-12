@@ -5,7 +5,6 @@ using UnityEngine;
 public class SpawnPoint : MonoBehaviour {
 
     public static bool nextSpawn = true;
-    public GameObject probe;
     public GameObject pickup;
 
     public static float xLimit;

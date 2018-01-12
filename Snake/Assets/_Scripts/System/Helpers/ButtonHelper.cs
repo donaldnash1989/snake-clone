@@ -9,7 +9,12 @@ public class ButtonHelper : MonoBehaviour {
         GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>().NextScene();
     }
 
-	public void MainMenu()
+    public void PrevScene()
+    {
+        GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>().PrevScene();
+    }
+
+    public void MainMenu()
     {
         GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>().MainMenu();
     }

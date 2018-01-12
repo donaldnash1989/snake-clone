@@ -6,30 +6,40 @@ public class GameManager : MonoBehaviour {
     [SerializeField]
     private GameObject player;
 
-    private static bool isOriginal = false, isInstanced = false;
+    private static bool isOriginal = false;
     private static GameObject _player;
+    private static GameObject i_player;
 
     private void Awake()
     {
         if (!isOriginal) DontDestroyOnLoad(gameObject);
         else Destroy(gameObject);
         isOriginal = true;
+    }
+
+    private void Start()
+    {
         _player = player;
     }
 
     public static void CreatePlayer(Vector3 spawnPosition)
     {
-        if(!isInstanced) _player = Instantiate(_player, spawnPosition, Quaternion.identity);
+        i_player = Instantiate(_player, spawnPosition, Quaternion.identity);
     }
 
     public static GameObject GetPlayer()
     {
-        return _player;
+        return i_player;
     }
 
     public void NextScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void PrevScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 
     public void MainMenu()
