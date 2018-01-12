@@ -6,6 +6,7 @@ public class Player : IInputListener {
     private static Player instance;
 
     private static Vector3 p_position;
+    private static Quaternion p_rotation;
 
     private static Vector3 velocity;
 
@@ -23,6 +24,7 @@ public class Player : IInputListener {
     }
 
     public Vector3 position { get { return p_position; } }
+    public Quaternion rotation { get { return p_rotation; } }
 
     public Vector3 Move()
     {
@@ -51,15 +53,19 @@ public class Player : IInputListener {
         {
             case KeyCode.W:
                 velocity = new Vector3(0.0F, 1.0f, 0.0f);
+                p_rotation = Quaternion.Euler(0.0f, 0.0f, 0.0f);
                 break;
             case KeyCode.A:
                 velocity = new Vector3(-1.0f, 0.0F, 0.0f);
+                p_rotation = Quaternion.Euler(0.0f, 0.0f, 90.0f);
                 break;
             case KeyCode.S:
                 velocity = new Vector3(0.0F, -1.0f, 0.0f);
+                p_rotation = Quaternion.Euler(0.0f, 0.0f, 180.0f);
                 break;
             case KeyCode.D:
                 velocity = new Vector3(1.0f, 0.0F, 0.0f);
+                p_rotation = Quaternion.Euler(0.0f, 0.0f, -90.0f);
                 break;
             default:
                 break;
@@ -70,6 +76,7 @@ public class Player : IInputListener {
     {
         p_position = Vector3.zero;
         velocity = new Vector3(0.0F, 1.0f, 0.0f);
+        p_rotation = Quaternion.Euler(0.0f, 0.0f, 0.0f);
         segments = 0;
         SpawnPoint.nextSpawn = true;
         PlayerObject.isMove = false;

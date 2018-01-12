@@ -17,10 +17,7 @@ public class PlayerObject : MonoBehaviour {
             isMove = true;
             StartCoroutine(DelayMove());
         }
-    }
-    void OnBecameInvisible()
-    {
-        GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>().NextScene();
+        transform.rotation = Player.GetInstance().rotation;
     }
 
     IEnumerator DelayMove()
