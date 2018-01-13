@@ -12,7 +12,7 @@ public class PlayerObject : MonoBehaviour {
         {
             if(positions.Count == 0) positions.Add(transform.position);
             else positions.Insert(0, transform.position);
-            if (positions.Count > Player.GetInstance().GetSegments()+1) positions.RemoveAt(positions.Count-1);
+            if (positions.Count > Player.GetInstance().GetSegments() + 2) positions.RemoveAt(positions.Count-1);
             transform.position = Player.GetInstance().Move();
             isMove = true;
             StartCoroutine(DelayMove());

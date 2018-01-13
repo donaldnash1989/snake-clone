@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour {
 
@@ -122,7 +123,7 @@ public class AudioManager : MonoBehaviour {
         bgmPlayer.Play();
     }
 
-    private void OnApplicationQuit()
+    void OnApplicationQuit()
     {
         PlayerPrefs.SetFloat("BGM", BGMVolume);
         PlayerPrefs.SetFloat("SFX", SFXVolume);

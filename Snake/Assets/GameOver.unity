@@ -371,6 +371,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   yourScore: {fileID: 1178176297}
   highScore: {fileID: 1944583886}
+  achievedHighScore: {fileID: 8300000, guid: 8a67228a5d134ef449f2f3c768ee1aee, type: 3}
 --- !u!1 &195045302
 GameObject:
   m_ObjectHideFlags: 0
@@ -1057,7 +1058,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 11.51754
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2

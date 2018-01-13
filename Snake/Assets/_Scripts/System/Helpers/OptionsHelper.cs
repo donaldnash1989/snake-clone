@@ -22,4 +22,10 @@ public class OptionsHelper : MonoBehaviour {
             SFXSlider.onValueChanged.AddListener(delegate { AudioManager.SFXValuChanged(SFXSlider.value); });
             trackDisplay.GetComponent<TMPro.TextMeshProUGUI>().text = "Current Track: " + AudioManager.CurrentTrack();
     }
+
+    public void SaveSettings()
+    {
+        PlayerPrefs.SetFloat("BGM", BGMSlider.value);
+        PlayerPrefs.SetFloat("SFX", SFXSlider.value);
+    }
 }
