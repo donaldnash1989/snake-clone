@@ -7,6 +7,7 @@ public class ResetHelper : MonoBehaviour {
     public AudioClip achievedHighScore;
 
     void Start () {
+        CursorManager.ShowCursor();
         if(PlayerPrefs.GetInt("HS") < Player.GetInstance().GetSegments())
         {
             PlayerPrefs.SetInt("HS", Player.GetInstance().GetSegments());

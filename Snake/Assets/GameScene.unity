@@ -494,7 +494,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8c2e2185db8fec42889f9f6434d6501, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  probe: {fileID: 0}
   pickup: {fileID: 1199404540209320, guid: 668fbfca07db1684892aafd3423e1e81, type: 2}
 --- !u!4 &158162226
 Transform:
@@ -1432,7 +1431,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4617511502869232, guid: 20b2f946995109247a40910920055640, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -22
+      value: -17
       objectReference: {fileID: 0}
     - target: {fileID: 4617511502869232, guid: 20b2f946995109247a40910920055640, type: 2}
       propertyPath: m_LocalPosition.y
@@ -2770,7 +2769,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4617511502869232, guid: 20b2f946995109247a40910920055640, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 22
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 4617511502869232, guid: 20b2f946995109247a40910920055640, type: 2}
       propertyPath: m_LocalPosition.y

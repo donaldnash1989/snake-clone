@@ -21,6 +21,11 @@ public class ButtonHelper : MonoBehaviour
         GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>().MainMenu();
     }
 
+    public void ExitGame()
+    {
+        GameManager.ExitGame();
+    }
+
     public void PlayClick()
     {
         AudioManager.PlaySoundEffect(buttonClick);
@@ -34,5 +39,20 @@ public class ButtonHelper : MonoBehaviour
     public void PrevTrack()
     {
         AudioManager.PrevTrack();
+    }
+
+    public void HideCursor()
+    {
+        CursorManager.HideCursor();
+    }
+
+    public void HideAndLockCursor()
+    {
+        CursorManager.HideAndLockCursor();
+    }
+
+    public void ShowCursor()
+    {
+        CursorManager.ShowCursor();
     }
 }

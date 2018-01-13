@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour {
 
     private void Start()
     {
+        GetComponent<CursorManager>().InitCursor();
         _player = player;
     }
 
@@ -47,7 +48,7 @@ public class GameManager : MonoBehaviour {
         SceneManager.LoadScene(0);
     }
 
-    public void ExitGame()
+    public static void ExitGame()
     {
         Application.Quit();
     }
