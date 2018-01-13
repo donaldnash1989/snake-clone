@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ButtonHelper : MonoBehaviour {
+public class ButtonHelper : MonoBehaviour
+{
+    public AudioClip buttonClick;
 
     public void NextScene()
     {
@@ -17,5 +19,20 @@ public class ButtonHelper : MonoBehaviour {
     public void MainMenu()
     {
         GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>().MainMenu();
+    }
+
+    public void PlayClick()
+    {
+        AudioManager.PlaySoundEffect(buttonClick);
+    }
+
+    public void NextTrack()
+    {
+        AudioManager.NextTrack();
+    }
+
+    public void PrevTrack()
+    {
+        AudioManager.PrevTrack();
     }
 }
