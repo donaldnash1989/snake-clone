@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour {
         if (!isOriginal) DontDestroyOnLoad(gameObject);
         else Destroy(gameObject);
         isOriginal = true;
+        Screen.SetResolution(800, 600, false);
     }
 
     private void Start()
